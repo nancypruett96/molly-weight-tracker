@@ -5,6 +5,7 @@ import WeightEntry from './components/WeightEntry'
 import Milestones from './components/Milestones'
 import HistoryTable from './components/HistoryTable'
 import BulkImport from './components/BulkImport'
+import FeedbackButton from './components/FeedbackButton'
 import { fetchEntries, addEntry, deleteEntry, bulkInsertEntries } from './lib/data'
 
 const SUPABASE_CONFIGURED =
@@ -160,6 +161,8 @@ export default function App() {
         onClose={() => setImportOpen(false)}
         onImport={handleImport}
       />
+
+      <FeedbackButton />
     </div>
   )
 }
